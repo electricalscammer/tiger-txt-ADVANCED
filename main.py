@@ -30,7 +30,7 @@ bot = Client("bot",
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"HELLO I AM TXT DOWNLOADER BOT MADE BY 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇 [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /pip")
+    editable = await m.reply_text(f"HELLO I AM TXT DOWNLOADER BOT MADE BY ELECTRIC HACKER 🥰 [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress Electric Scammer")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -39,9 +39,9 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["pip"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["govind"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
+    editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend me ur txt file 📂**")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
@@ -169,8 +169,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} 🅰🅸🆁 🅿🅷🅴🅾🅽🅸🆇.pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) Electric Hacker.mkv\n**Batch Name :** {b_name}\n\n**Provided by : {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} Electric Hacker.pdf \n**Batch Name :**{b_name}\n\n**Provided by : {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -197,7 +197,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by TIGER ❤️**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by Electric Hacker Team**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -205,13 +205,13 @@ async def account_login(bot: Client, m: Message):
                     count += 1
 
             except Exception as e:
-                await m.reply_text(f"**This #Failed File is not Counted**\n**Name** =>> `{name}`\n**Link** =>> `{url}`\n\n ** fail reason »** {e}")
+                await m.reply_text(f"**This #sorry yaar nhi ho skta**\n**Name** =>> `{name}`\n**Link** =>> `{url}`\n\n ** fail reason »** {e}")
                 count += 1
                 continue
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("🔰Done 🅿🅷🅴🅾🅽🅸🆇🔰")
+    await m.reply_text("🔰Done🔰 Regards by Electric Hacker Team")
 
 
 bot.run()
